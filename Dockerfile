@@ -12,11 +12,11 @@ MAINTAINER shijh666
 # Set default environment variables
 # -----------------------------------------------------------------------------
 ENV SSHD_PORT 22
-ENV SSR_PORT 1000
+ENV SSR_PORT 5454
 ENV SVD_PORT 1080
 
 ENV DEFAULT_USERNAME root
-ENV DEFAULT_PASSWORD password
+ENV DEFAULT_PASSWORD mati0211
 
 # -----------------------------------------------------------------------------
 # Copy files into container
@@ -71,7 +71,7 @@ RUN cd /root/ && \
 # Install ShadowsocksR
 # -----------------------------------------------------------------------------
 RUN cd /root/ && \
-	git clone -b manyuser https://github.com/shadowsocksr/shadowsocksr.git && \
+	git clone -b manyuser https://github.com/MaityChen/shadowsocksr && \
 	cp -nf shadowsocksr/config.json shadowsocksr/shadowsocks/user-config.json
 	
 EXPOSE $SSR_PORT
