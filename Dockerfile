@@ -6,7 +6,7 @@
 # =============================================================================
 FROM centos:latest
 
-MAINTAINER shijh666
+MAINTAINER rockmaity
 
 # -----------------------------------------------------------------------------
 # Set default environment variables
